@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+
+import time  # This is the module that contains the sleep function
+from datetime import datetime
 tabela = pd.DataFrame(
     {
         "first column": [1, 2, 3, 4],
@@ -127,6 +130,19 @@ print(date)
 #time input
 time = st.time_input("time_input")
 print(time)
+
+#Timer App With Progress Bar | Complete Streamlit Python Course | Streamlit Tutorial 11
+
+st.markdown("----")
+
+bar = st.progress(0)
+for i in range(10):
+ 
+    bar.progress((i+1)*10)
+    time.sleep(0.1)
+
+
+
 
 
 
